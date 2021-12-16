@@ -8,5 +8,7 @@ urlpatterns = [
     path('pets/<int:id>/', pet, name='pet'),
     path('sitters/', sitters, name='sitters'),
     path('sitters/<int:id>/', sitter, name='sitter'),
+    path('join/', join, name='join'),
+
 ]
 
