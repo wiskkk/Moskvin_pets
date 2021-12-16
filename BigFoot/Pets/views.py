@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .models import *
 
 
+def test(request):
+    return render(request, 'Pets/test.html', {})
+
+
 def index(request):
     return render(request, 'Pets/index.html', {})
 
@@ -28,3 +32,7 @@ def sitters(request):
 
 def sitter(request, id):
     return render(request, 'Pets/sitter.html', {})
+
+
+def login(request):
+    return render(request, 'Pets/login.html')
