@@ -10,7 +10,7 @@ urlpatterns = [
     path('sitters/', sitters, name='sitters'),
     path('sitters/<int:id>/', sitter, name='sitter'),
     path('join/', join, name='join'),
-    path('login/', login, name='login')
+    path('login/', login, name='login'),
 
 ]
 
