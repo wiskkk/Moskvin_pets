@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+
+<div class="section section-md">
+    <div class="container">
+        <div class="row mb-5">
+            <form method="post" action="" enctype="multipart/form-data" class="col-lg-4 col-sm-6">
+                <fieldset style="font-family: 'Nunito Sans'">
+                    <legend style="text-align: center">Sitter sign up</legend>
+                    {% csrf_token %}
+                    {% include 'bs4_form.html' with form=form %}
+                    <div class="col-12">
+                        <button class="btn btn-lg btn-warning" type="submit">Sign up like a sitter</button>
+                    </div>
+                </fieldset>
+                <!--                <input type="submit" value="add"/>-->
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock maincontent %}

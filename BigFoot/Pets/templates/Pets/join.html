@@ -2,78 +2,88 @@
 
 {% block maincontent %}
 
+
 <div class="section section-md">
     <div class="container">
         <div class="row mb-5">
-            <form class="col-lg-4 col-sm-6">
-                <fieldset style="font-family: 'Nunito Sans'">
-                    <legend style="text-align: center ">Customer sign up</legend>
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label for="validationServer01">Name</label>
-                        <input type="text" class="form-control" id="validationServer01" required="">
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-4">
-                        <label for="validationServerUsername">Surname</label>
-                        <input type="text" class="form-control" id="validationServerUsername" required="">
-                        <div class="invalid-feedback">
-                            Please choose a username.
-                        </div>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-4">
-                        <label for="exampleInputEmail6">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail6">
-                        <small id="emailHelp" class="form-text text-gray">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1">Write something about yourself</label>
-                        <textarea class="form-control" placeholder="Enter your message..."
-                                  id="exampleFormControlTextarea1"
-                                  rows="4"></textarea>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label class="my-1 me-2" for="inlineFormCustomSelectPref">Chose your pets</label>
-                        <select class="form-select" id="inlineFormCustomSelectPref" aria-label="Default select example">
-                            <option selected="">Pets</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-4">
-                        <label for="validationServerUsername">Pet name</label>
-                        <input type="text" class="form-control is-invalid" id="validationServerPetname" required="">
-                        <div class="invalid-feedback">
-                            Please write a pet name.
-                        </div>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Chose a photo</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                    <!-- End of Form -->
-                    <div class="col-12">
-                        <button class="btn btn-lg btn-warning" type="submit">Sign up like a customer</button>
-                    </div>
-                </fieldset>
+            <!--            <form class="col-lg-4 col-sm-6">-->
+            <!--                <fieldset style="font-family: 'Nunito Sans'">-->
+            <!--                    <legend style="text-align: center ">Customer sign up</legend>-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-3">-->
+            <!--                        <label for="validationServer01">Name</label>-->
+            <!--                        <input type="text" class="form-control" id="validationServer01" required="">-->
+            <!--                        <div class="valid-feedback">-->
+            <!--                            Looks good!-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-4">-->
+            <!--                        <label for="validationServerUsername">Surname</label>-->
+            <!--                        <input type="text" class="form-control" id="validationServerUsername" required="">-->
+            <!--                        <div class="invalid-feedback">-->
+            <!--                            Please choose a username.-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-4">-->
+            <!--                        <label for="exampleInputEmail6">Email address</label>-->
+            <!--                        <input type="email" class="form-control" id="exampleInputEmail6">-->
+            <!--                        <small id="emailHelp" class="form-text text-gray">We'll never share your email with anyone-->
+            <!--                            else.</small>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-3">-->
+            <!--                        <label for="exampleFormControlTextarea1">Write something about yourself</label>-->
+            <!--                        <textarea class="form-control" placeholder="Enter your message..."-->
+            <!--                                  id="exampleFormControlTextarea1"-->
+            <!--                                  rows="4"></textarea>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-3">-->
+            <!--                        <label class="my-1 me-2" for="inlineFormCustomSelectPref">Chose your pets</label>-->
+            <!--                        <select class="form-select" id="inlineFormCustomSelectPref" aria-label="Default select example">-->
+            <!--                            <option selected="">Pets</option>-->
+            <!--                            <option value="1">One</option>-->
+            <!--                            <option value="2">Two</option>-->
+            <!--                            <option value="3">Three</option>-->
+            <!--                        </select>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-4">-->
+            <!--                        <label for="validationServerUsername">Pet name</label>-->
+            <!--                        <input type="text" class="form-control is-invalid" id="validationServerPetname" required="">-->
+            <!--                        <div class="invalid-feedback">-->
+            <!--                            Please write a pet name.-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Form &ndash;&gt;-->
+            <!--                    <div class="mb-3">-->
+            <!--                        <label for="formFile" class="form-label">Chose a photo</label>-->
+            <!--                        <input class="form-control" type="file" id="formFile">-->
+            <!--                    </div>-->
+            <!--                    &lt;!&ndash; End of Form &ndash;&gt;-->
+            <!--                    <div class="col-12">-->
+            <!--                        <button class="btn btn-lg btn-warning" type="submit">Sign up like a customer</button>-->
+            <!--                    </div>-->
+            <!--                </fieldset>-->
 
+            <!--            </form>-->
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ add_customer.as_p }}
+                <input type="submit" name="{{add_customer.prefix}}" value="Submit"/>
+                {{ add_pet.as_p }}
+                <input type="submit" name="{{add_pet.prefix}}" value="Submit"/>
             </form>
+
             <div class="col-12 col-md-6 col-lg-4 mb-5 mb-md-7 mb-lg-0">
                 <div class="card border-0 overflow-hidden" style="background-color: initial;">
                     <div class="position-relative">
@@ -92,69 +102,16 @@
                     </div>
                 </div>
             </div>
-            <form class="col-lg-4 col-sm-6">
+            <form method="post" action="" enctype="multipart/form-data" class="col-lg-4 col-sm-6">
                 <fieldset style="font-family: 'Nunito Sans'">
-                    <legend style="text-align: center ">Sitter sign up</legend>
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label for="validationServer01">Name</label>
-                        <input type="text" class="form-control" id="1validationServer01" required="">
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-4">
-                        <label for="validationServerUsername">Surname</label>
-                        <input type="text" class="form-control" id="1validationServerUsername" required="">
-                        <div class="invalid-feedback">
-                            Please choose a username.
-                        </div>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-4">
-                        <label for="exampleInputEmail6">Email address</label>
-                        <input type="email" class="form-control" id="1exampleInputEmail6">
-                        <small id="1emailHelp" class="form-text text-gray">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <!-- End of Form -->
-                    <!-- Form -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1">Write something about yourself</label>
-                        <textarea class="form-control" placeholder="Enter your message..."
-                                  id="1exampleFormControlTextarea1"
-                                  rows="4"></textarea>
-                    </div>
-                    <!-- End of Form -->
-                    <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
-                        <!-- Radio -->
-                        <fieldset>
-                            <legend class="h6">Experience</legend>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                       value="option1" checked="">
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                       value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    No
-                                </label>
-                            </div>
-                            <!-- End of Radio -->
-                        </fieldset>
-                    </div>
-
+                    <legend style="text-align: center">Sitter sign up</legend>
+                    {% csrf_token %}
+                    {% include 'bs4_form.html' with form=form %}
                     <div class="col-12">
                         <button class="btn btn-lg btn-warning" type="submit">Sign up like a sitter</button>
                     </div>
                 </fieldset>
+                <!--                <input type="submit" value="add"/>-->
             </form>
         </div>
     </div>

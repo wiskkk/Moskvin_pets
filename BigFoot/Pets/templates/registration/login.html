@@ -19,17 +19,9 @@
     <fieldset style="font-family: 'Nunito Sans'">
         <legend style="text-align: center ">Please login to see this page.</legend>
         {% csrf_token %}
-        <table class="table table-striped">
-            <tr>
-                <td headers="firstyear2 Bolter2 males2">{{ form.username.label_tag }}</td>
-                <td headers="firstyear2 Bolter2 males2">{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td headers="firstyear2 Bolter2 males2">{{ form.password.label_tag }}</td>
-                <td headers="firstyear2 Bolter2 males2">{{ form.password }}</td>
-            </tr>
-        </table>
-        <input type="submit" value="Login"/>
+        {% include 'bs4_form.html' with form=form %}
+
+        <input type="submit" value="Login" class="btn btn-primary"/>
         <input type="hidden" name="next" value="{{ next }}"/>
     </fieldset>
 </form>

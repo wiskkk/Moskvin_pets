@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Pets.apps.PetsConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
