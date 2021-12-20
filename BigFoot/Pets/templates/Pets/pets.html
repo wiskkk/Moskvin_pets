@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+
+<div class="section section-md">
+    <div class="container">
+        <div class="row mb-5">
+            {% for p in pets %}
+            <div class="col-12 col-md-6 col-lg-4 mb-5 mb-md-7 mb-lg-0">
+                <div class="card border-0 overflow-hidden" style="background-color: initial;">
+                    <div class="position-relative">
+                        {% if p.pet_img %}
+                        <img width="30%" src="{{ p.pet_img.url }}" class="card-img-top">
+                        {% else %}
+                        <img src="/static/IMG_5896.PNG" class="card-img-top"
+                             alt="img5923">
+                        {% endif %}
+                    </div>
+                    <div class="card-body position-relative mt-n6 mx-2 bg-white border border-gray-300 text-center rounded">
+                        <h3 class="h5 card-title">Owner: {{p.customer}}</h3>
+
+                        <a href="{% url 'pets' p.id %}" class="fw-bold text-primary  ms-1">
+                            <h3>Moniker: {{ p.pet_name }}</h3></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock maincontent %}

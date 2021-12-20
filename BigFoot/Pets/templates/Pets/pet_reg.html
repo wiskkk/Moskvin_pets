@@ -46,9 +46,9 @@
                 <fieldset style="font-family: 'Nunito Sans'">
                     <legend style="text-align: center">Client sign up</legend>
                     {% csrf_token %}
-                    {{ customer_form|crispy }}
+                    {{ pet_form|crispy }}
                     <div class="col-12">
-                        <button class="btn btn-lg btn-warning" type="submit">Sign up and add pets</button>
+                        <button class="btn btn-lg btn-warning" type="submit">Add pets</button>
                     </div>
                 </fieldset>
             </form>

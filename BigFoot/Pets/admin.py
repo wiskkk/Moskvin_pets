@@ -3,7 +3,7 @@ from .models import Customers, Pets, Sitters
 
 
 class CustomersAdmin(admin.ModelAdmin):
-    list_display = ('customer_id', 'name', 'surname', 'email')
+    list_display = ('name', 'surname', 'email')
     search_fields = ('name', 'surname')
 
 
@@ -14,7 +14,7 @@ class SittersAdmin(admin.ModelAdmin):
 
 
 class PetsAdmin(admin.ModelAdmin):
-    list_display = ('pet_name', 'pet_type', 'pet_img')
+    list_display = ('id', 'pet_name', 'pet_type', 'pet_img')
 
 
 admin.site.register(Customers, CustomersAdmin)

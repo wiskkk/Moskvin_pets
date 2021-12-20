@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+    <div>
+        <h1>Pet name: {{pet.pet_name}}</h1>
+        <h3>{{pet.pet_type}}</h3>
+        {% if pet.pet_img %}
+        <img width="30%" src="{{ pet.pet_img.url }}">
+        {% endif %}
+        <p>Owner: {{pet.customer}}</p>
+        
+    </div>
+
+{% endblock maincontent %}

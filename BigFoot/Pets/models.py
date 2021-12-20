@@ -3,14 +3,13 @@ from django.db.models import CharField
 
 
 class Customers(models.Model):
-    customer_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     email = models.EmailField(blank=True)
     about = models.TextField(blank=True)
 
-    def __str__(self) -> CharField:
-        return self.name
+    def __str__(self) -> str:
+        return f'{self.name} {self.surname}'
 
 
 class Pets(models.Model):
@@ -19,7 +18,7 @@ class Pets(models.Model):
     pet_name = models.CharField(max_length=50)
     pet_img = models.ImageField(upload_to='upload', blank=True)
 
-    owner = models.ForeignKey('Customers', on_delete=models.CASCADE)
+    customer = models.ForeignKey('Customers', on_delete=models.CASCADE)
 
     def __str__(self) -> CharField:
         return self.pet_name

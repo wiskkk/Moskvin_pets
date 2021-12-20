@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block maincontent %}
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
 
 {% if next %}
 {% if user.is_authenticated %}
@@ -19,7 +18,7 @@
     <fieldset style="font-family: 'Nunito Sans'">
         <legend style="text-align: center ">Please login to see this page.</legend>
         {% csrf_token %}
-        {% include 'bs4_form.html' with form=form %}
+        {{ form|crispy }}
 
         <input type="submit" value="Login" class="btn btn-primary"/>
         <input type="hidden" name="next" value="{{ next }}"/>
