@@ -5,10 +5,17 @@ from .models import Pets, Customers, Sitters
 from django.forms.fields import Field
 
 
+class AddPets(forms.ModelForm):
+    class Meta:
+        model = Pets
+        fields = ('pet_type', 'pet_name', 'pet_img', 'customer')
+
+
 class AddSitter(forms.Form):
     name = forms.CharField(max_length=50, label='Name')
     surname = forms.CharField(max_length=50, label='Surname')
     email = forms.EmailField(label='Email')
+    image = forms.ImageField(label='Your profile image')
     about = forms.CharField(widget=forms.Textarea, label='About')
     experience = forms.BooleanField(required=False, label='Experience')
 
@@ -62,7 +69,3 @@ class AddCustomer(forms.Form):
 #     pets_img = forms.ImageField(label='Pet image')
 
 
-class AddPets(forms.ModelForm):
-    class Meta:
-        model = Pets
-        fields = ('pet_type', 'pet_name', 'pet_img', 'customer')

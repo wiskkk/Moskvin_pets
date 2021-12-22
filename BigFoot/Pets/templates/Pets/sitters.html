@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+<div class="container">
+    <div class="row mb-5 mb-lg-6">
+        <div class="col-12 col-md-9 col-lg-8 text-center mx-auto">
+            <h2 class="h1 mb-4">Team of professionals</h2>
+            <p class="lead">Each of us is a person who loves his job. We are looking for an approach to each pet and try
+                to completely replace you - its owners
+            </p>
+        </div>
+    </div>
+    <div class="row mb-5 mb-lg-6">
+
+        {% for s in sitters_all %}
+
+        <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+            <div class="card shadow border-gray-300">
+                {% if s.image %}
+                <img width="30%" src="{{ s.image.url }}" class="card-img-top rounded-top">
+                {% else %}
+                <img src="/static/IMG_5920.PNG" class="card-img-top rounded-top"
+                     alt="img5923">
+                {% endif %}
+                <div class="card-body">
+                    <h3 class="h4 card-title mb-2">{{ s.name }}</h3>
+                    <span class="card-subtitle text-gray fw-normal">Sitter</span>
+                    <p class="card-text my-3">{{ s.about }}</p>
+                    <ul class="list-unstyled d-flex mt-3 mb-0">
+                        <li>
+                            <a href="{% url 'sitters' s.id %}" target="_blank" aria-label="slack social link"
+                               class="icon-slack me-3">
+                                <span class="fab fa-slack-hash">Profile</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock maincontent %}

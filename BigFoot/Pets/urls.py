@@ -15,7 +15,6 @@ urlpatterns = [
     path('team_reg/', add_sitter, name='team_reg'),
     path('client_reg/', add_customer, name='client_reg'),
     path('pet_reg/', add_pets, name='pet_reg'),
-    path('user/', user, name='user'),
     path('locate/', locate, name='locate'),
 
 ]

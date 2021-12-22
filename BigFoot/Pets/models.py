@@ -28,6 +28,7 @@ class Sitters(models.Model):
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     email = models.EmailField(blank=True)
+    image = models.ImageField(upload_to='upload', blank=True)
     about = models.TextField(blank=True)
     experience = models.BooleanField(default=False, verbose_name='Have any experience?')
 

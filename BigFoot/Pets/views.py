@@ -39,6 +39,25 @@ def pet(request, id):
     return render(request, 'Pets/pet.html', {"pet": p})
 
 
+def sitter(request, id):
+    try:
+        sitter_elem = Sitters.objects.get(id=id)
+    except:
+        return Http404(request)
+
+    return render(request, 'Pets/sitter.html', {'sitter_elem': sitter_elem})
+
+
+def sitters(request):
+    sitters_all = Sitters.objects.all()
+
+    return render(request, 'Pets/sitters.html', {'sitters_all': sitters_all})
+
+
+def choice(request):
+    return render(request, 'Pets/choice.html', {})
+
+
 def team_reg(request):
     return render(request, 'Pets/team_reg.html', {})
 
@@ -47,36 +66,21 @@ def client_reg(request):
     return render(request, 'Pets/client_reg.html', {})
 
 
-def choice(request):
-    return render(request, 'Pets/choice.html', {})
-
-
-def sitters(request):
-    return render(request, 'Pets/sitters.html', {})
-
-
-def sitter(request, id):
-    return render(request, 'Pets/sitter.html', {})
-
-
-def user(request):
-    return render(request, 'Pets/user.html', {})
-
-
 def add_sitter(request):
     if request.method == "POST":  # the form was submited
-        form = AddSitter(request.POST)
+        form = AddSitter(request.POST, request.FILES)
         if form.is_valid():
             sitter_entire = Sitters()
             sitter_entire.name = form.cleaned_data['name']
             sitter_entire.surname = form.cleaned_data['surname']
             sitter_entire.email = form.cleaned_data['email']
+            sitter_entire.image = form.cleaned_data['image']
             sitter_entire.about = form.cleaned_data['about']
             sitter_entire.experience = form.cleaned_data['experience']
 
             sitter_entire.save()
 
-            return redirect('about')
+            return redirect('sitters')
     else:  # new form should be displayed
         form = AddSitter()
     return render(request, 'Pets/team_reg.html', {'form': form})

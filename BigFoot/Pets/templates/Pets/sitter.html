@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+    <div>
+        <h1>Name: {{sitter_elem.name}}</h1>
+        <h1>{{sitter_elem.surname}}</h1>
+        {% if sitter_elem.image %}
+        <img width="30%" src="{{ sitter_elem.image.url }}">
+        {% endif %}
+        <p>about sitter: {{sitter_elem.about}}</p>
+
+    </div>
+
+{% endblock maincontent %}
